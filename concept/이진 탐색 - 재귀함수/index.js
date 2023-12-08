@@ -8,7 +8,7 @@ function binarySearch(arr, target, start, end) {
 }
 
 const n = 10;
-const target = 7;
+const target = 6;
 const data = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19];
 
 console.log(binarySearch(data, target, 0, n - 1));
