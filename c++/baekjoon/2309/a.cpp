@@ -2,13 +2,14 @@
 
 using namespace std;
 
-vector<int> dwarfs(9);
+int dwarfs[9];
 
-int main(){
-  for(int i = 0; i < 9; i++) cin >> dwarfs[i];
-  sort(dwarfs.begin(),dwarfs.end());
-  for (int i = 0; i < 7; i++) {
-      cout << dwarfs[i] << ' ';
+int main() {
+  for (int i = 0; i <= 8; i++) {
+    cin >> dwarfs[i];
   }
-  return 0;
+
+  sort(dwarfs, dwarfs + 9);
+
+  
 }
