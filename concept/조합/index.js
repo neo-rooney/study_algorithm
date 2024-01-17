@@ -1,17 +1,17 @@
-const getCombinations = (arr, select) => {
-  let results = [];
-
-  if (select === 1) return arr.map((el) => [el]);
+const getCombination = (arr, select) => {
+  const resultArray = [];
+  if (select === 1) return arr.map((item) => [item]);
 
   arr.map((fixed, index, origin) => {
     const rest = origin.slice(index + 1);
-    const combinations = getCombinations(rest, select - 1);
-    const attached = combinations.map((el) => [fixed, ...el]);
-    results.push(...attached);
+    const combinations = getCombination(rest, select - 1);
+    const result = combinations.map((combination) => [fixed, ...combination]);
+    resultArray.push(...result);
   });
 
-  return results;
+  return resultArray;
 };
 
-const test = getCombinations([1, 2, 3], 2);
-// console.log(test);
+const test = getCombination([1, 2, 3, 4, 5], 3);
+
+console.log(test);
